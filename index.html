@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f3ede2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="老大的日程监督台">
+  <title>老大的日程监督台</title>
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <main class="phone-stage">
+    <section class="phone-frame">
+      <div class="phone-topbar">
+        <span>9:41</span>
+        <div class="phone-notch"></div>
+        <span>100%</span>
+      </div>
+      <div class="phone-scroll">
+        <div class="app-shell">
+    <section class="hero-card">
+      <div class="phone-orb"></div>
+      <p class="eyebrow">XIA XIA / PERSONAL PLANNER</p>
+      <h1>老大的日程监督台</h1>
+      <p class="hero-copy">从早上 6 点到晚上 11 点，把作息、任务、健康和娱乐都收进一张你自己看着舒服的小面板里。</p>
+      <div class="mobile-strip">
+        <span>今日节奏</span>
+        <strong>像手机 App 一样直接看、直接打卡</strong>
+      </div>
+      <div class="hero-stats">
+        <article>
+          <span id="completionRate">0%</span>
+          <p>今日完成率</p>
+        </article>
+        <article>
+          <span id="checkedCount">0 / 17</span>
+          <p>已打卡时段</p>
+        </article>
+        <article>
+          <span id="habitScore">0 / 6</span>
+          <p>健康习惯</p>
+        </article>
+      </div>
+      <div id="nowCard" class="now-card">
+        <p class="panel-kicker">NOW</p>
+        <strong id="nowTime">现在还没到计划时段</strong>
+        <p id="nowTask">等会儿我会帮你自动定位到当前该做的事情。</p>
+      </div>
+    </section>
+
+    <section class="panel panel-focus">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">TODAY</p>
+          <h2>今日主轴</h2>
+        </div>
+        <button id="resetBtn" class="ghost-btn" type="button">重置今天</button>
+      </div>
+      <div class="focus-grid">
+        <label>
+          <span>日期</span>
+          <input id="planDate" type="date">
+        </label>
+        <label class="wide">
+          <span>今日核心目标</span>
+          <input id="coreGoal" type="text" placeholder="比如：把今天的重要安排理顺">
+        </label>
+        <label>
+          <span>最重要的事 1</span>
+          <input id="top1" type="text" placeholder="先啃最难的">
+        </label>
+        <label>
+          <span>最重要的事 2</span>
+          <input id="top2" type="text" placeholder="推进关键任务">
+        </label>
+        <label>
+          <span>最重要的事 3</span>
+          <input id="top3" type="text" placeholder="收尾和整理">
+        </label>
+      </div>
+    </section>
+
+    <section class="panel panel-schedule">
+      <div class="panel-head">
+        <div>
+          <p class="panel-kicker">SCHEDULE</p>
+          <h2>06:00 - 23:00 时间表</h2>
+        </div>
+        <p class="panel-note">每个时段都能填写安排，也能直接打卡。</p>
+      </div>
+      <div id="scheduleList" class="schedule-list"></div>
+    </section>
+
+    <section class="panel panel-bottom">
+      <div class="stack">
+        <div class="panel-head compact">
+          <div>
+            <p class="panel-kicker">HABITS</p>
+            <h2>健康和娱乐规则</h2>
+          </div>
+        </div>
+        <div id="habitList" class="habit-list"></div>
+      </div>
+      <div class="stack">
+        <div class="panel-head compact">
+          <div>
+            <p class="panel-kicker">REVIEW</p>
+            <h2>晚间复盘</h2>
+          </div>
+        </div>
+        <label>
+          <span>今天完成得最好的是</span>
+          <textarea id="reviewWin" rows="4" placeholder="写一句就行"></textarea>
+        </label>
+        <label>
+          <span>明天最该调整的是</span>
+          <textarea id="reviewFix" rows="4" placeholder="比如：别在晚上乱开新坑"></textarea>
+        </label>
+      </div>
+    </section>
+        </div>
+      </div>
+      <div class="phone-homebar"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
